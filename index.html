@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="images/icon/iconfont.css" />
+		
+	</head>
+
+	<body>
+		<!--首页背景设置-->
+		<div class="home">
+			<!--内容区域-->
+			<div class="content">
+				<!--导航航头-->
+				<div class="navigationHead">
+					<div class="nav">
+						<div class="nav_user">
+							<!--点击登录用户-->
+						</div>
+						<div class="nav_navigation">
+							<!--点击菜单栏-->
+						</div>
+
+						<div class="nav_search">
+							<!--点击搜索框-->
+						</div>
+					</div>
+					<!-- 点击登录弹出登录界面 -->
+					<div id="outbox-l">
+						<div id="loginDiv">
+							<div class="top">
+								<i class="iconfont icon-quxiao signIn_quxiao"></i>
+							</div>
+							<div class="prompt">Hello! 山脉欢迎您！</div>
+							<ul>
+								<li>
+									<i class="iconfont icon-gerenzhongxin"></i>
+									<input type="text" value="请输入账号" onfocus="if (value =='请输入账号'){value =''}" onblur="if (value ==''){value='请输入账号'}" />
+								</li>
+								<li>
+									<i class="iconfont icon-mima"></i>
+									<input type="text" value="请输入密码" onfocus="if (value =='请输入密码'){value =''}" onblur="if (value ==''){value='请输入密码'}" />
+								</li>
+							</ul>
+							<div class="buttons">
+								<button>登录</button>
+								<div class="tishi">
+									<p>如果您已有注册账号，请前往<span><a href="#" id="register">登录.</a></span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 描述：点击注册弹出注册界面 -->
+					<div id="outbox-r">
+						<div id="registerDiv">
+							<div class="top">
+								<i class="iconfont icon-quxiao register_quxiao"></i>
+							</div>
+							<div class="prompt">Hello! 山脉欢迎您！</div>
+							<ul>
+								<li>
+									<i class="iconfont icon-gerenzhongxin"></i>
+									<input type="text" value="请输入手机号或者邮箱" onfocus="if (value =='请输入手机号或者邮箱'){value =''}" onblur="if (value ==''){value='请输入手机号或者邮箱'}" />
+								</li>
+								<li>
+									<i class="iconfont icon-mima"></i>
+									<input type="text" value="请设置您的密码" onfocus="if (value =='请设置您的密码'){value =''}" onblur="if (value ==''){value='请设置您的密码'}" />
+								</li>
+							</ul>
+							<div class="buttons">
+								<button>登录</button>
+								<div class="tishi">
+									<p>如果您已有注册账号，请前往<span><a href="#" id="signIn">登录.</a></span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/*======点击显示菜单栏======*/-->
+					<div class="menuBar" style="display: none;">
+						<ul>
+							<li>
+								<img src="images/navigation_sel.png" class="navigation_sel" />
+							</li>
+							<li class="menuBar_Jump">
+								<p> 跳转到页面的 </p>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="naver('view_1')">与非云 </a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="naver('view_2')">硬件产品</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="naver('view_3')">解决方案</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="naver('view_4')">技术团队</a>
+							</li>
+						</ul>
+					</div>
+           <!--点击显示搜索框-->
+					<div class="search">
+						<div class="search_box">
+							<input type="text" value="请输入您的问题" onfocus="if (value =='请输入您的问题'){value =''}" onblur="if (value ==''){value='请输入您的问题'}" />
+							<img src="images/search_sel.png"  class="search_img">
+						</div>
+					</div>
+				</div>
+
+				<!--轮播-->
+				<div class="carousel">
+					<div class="slipping-area">
+						<div class="slipping-imgbox">
+							<img src="images/banner.png" alt="">
+							<img src="images/banner.png" alt="">
+							<img src="images/banner.png" alt="">
+							<img src="images/banner.png" alt="">
+							<img src="images/banner.png" alt="">
+						</div>
+					</div>
+
+					<!--内容展示区-->
+					<div class="displayArea">
+						<div id="view_1"><img src="images/view_1.jpg" /></div>
+						<div id="view_2"><img src="images/view_2.jpg" /></div>
+						<div id="view_3"><img src="images/view_3.jpg" /></div>
+						<div id="view_4"><img src="images/view_4.jpg" /></div>
+					</div>
+				</div>
+			</div>
+			<script src="js/jquery-1.11.1.min.js"></script>
+			<script type="text/javascript" src="js/insex.js"></script>
+			<script src="js/slip.js"></script>
+			<script>
+        //			自动轮播时间
+				slip.iniT('.slipping-area', 3000);
+				//			点击跳转锚点事件
+				function naver(id) {
+					var obj = document.getElementById(id);
+					var oPos = obj.offsetTop;
+					return window.scrollTo(0, oPos - 36);
+				}
+			</script>
+	</body>
+
+</html>

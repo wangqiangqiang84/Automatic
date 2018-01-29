@@ -1,0 +1,412 @@
+html {
+	overflow-x: hidden;
+	min-height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	min-height: 100%;
+}
+
+ul,
+li,
+div,
+body,
+p,
+span,
+b,
+img,
+input {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+div {
+	text-align: center
+}
+
+
+/*======首页背景设置======*/
+
+.home {
+	width: 100%;
+	/*background: red;*/
+	margin: 0 auto;
+}
+
+.content {
+	position: relative;
+}
+
+
+/*======导航航头======*/
+
+.navigationHead {
+	width: 100%;
+	height: 132px;
+	position: fixed;
+	z-index: 2;
+}
+
+.navigationHead .nav {
+	text-align: center;
+	position: relative;
+	background: #FFFFFF;
+	/*margin-top: 12px;*/
+}
+
+.navigationHead .nav .nav_user,
+.nav_navigation,
+.nav_search {
+	display: inline-block;
+	width: 66px;
+	height: 66px;
+	margin: 30px 0 30px 0;
+	cursor: pointer
+}
+
+
+/*======点击用户======*/
+
+.navigationHead .nav .nav_user {
+	position: absolute;
+	left: 54px;
+	background-image: url(../images/user.png);
+}
+
+
+/*======登录======*/
+
+#outbox-l,
+#outbox-r {
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	display: none;
+}
+
+#outbox-l #loginDiv,
+#outbox-r #registerDiv {
+	width: 772px;
+	height: 600px;
+	margin: 500px auto;
+	box-sizing: border-box;
+	background-image: linear-gradient(to bottom right, #4c4b56, #191823);
+	border-radius: 15px;
+}
+
+#outbox-l #loginDiv .top i,
+#outbox-r #registerDiv .top i {
+	float: right;
+	margin-right: 15px;
+	margin-top: 12px;
+	font-size: 30px;
+	color: #f6ead5;
+	cursor: pointer;
+}
+
+#outbox-l #loginDiv .prompt,
+#outbox-r #registerDiv .prompt {
+	font-size: 30px;
+	color: #f6ead5;
+	letter-spacing: 5px;
+	text-align: center;
+	margin: 0;
+	padding: 91px 0 50px 0;
+}
+
+#outbox-l #loginDiv ul,
+#outbox-r #registerDiv ul {
+	width: 516px;
+	margin: 0 auto;
+	text-align: left;
+	box-sizing: border-box;
+}
+
+#outbox-l #loginDiv ul li,
+#outbox-r #registerDiv ul li {
+	height: 73px;
+	line-height: 73px;
+	border-radius: 40px;
+	background-color: #1f1f1f;
+}
+
+#outbox-l #loginDiv ul li:nth-child(2),
+#outbox-r #registerDiv ul li:nth-child(2) {
+	margin-top: 35px;
+}
+
+#outbox-l #loginDiv ul li i,
+#outbox-r #registerDiv ul li i {
+	font-size: 26px;
+	color: white;
+	padding: 0 23px 0 33px;
+}
+
+#outbox-l #loginDiv ul li input,
+#outbox-r #registerDiv ul li input {
+	height: 35px;
+	border: none;
+	background-color: #1F1F1F;
+	outline: none;
+	font-size: 30px;
+	color: #999999;
+	letter-spacing: 4px;
+}
+
+#outbox-l #loginDiv button,
+#outbox-r #registerDiv button {
+	width: 208px;
+	height: 63px;
+	border: none;
+	border-radius: 45px;
+	font-size: 36px;
+	color: #F6EAD5;
+	letter-spacing: 5px;
+	outline: none;
+	box-sizing: border-box;
+	background-image: linear-gradient(90deg, #ff9d7d, #9b67cf);
+}
+
+#outbox-r #registerDiv .buttons,
+#outbox-l #loginDiv .buttons {
+	text-align: center;
+	margin: 66px 0 69px 0;
+}
+
+#outbox-l #loginDiv p,
+#outbox-r #registerDiv p {
+	font-size: 27px;
+	color: #999285;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#outbox-l #loginDiv .tishi a,
+#outbox-r #registerDiv .tishi a {
+	color: #F6EAD5;
+	letter-spacing: 5px;
+	line-height: 44px;
+}
+
+
+/*======注册======*/
+
+#outbox-r #registerDiv button {
+	background-image: linear-gradient(90deg, #5fedca, #bf7fff);
+	box-shadow: #ad8ef5;
+	outline: none;
+}
+
+
+/*======点击菜单栏======*/
+
+.navigationHead .nav .nav_navigation {
+	width: 74px;
+	height: 28px;
+	margin-top: 50px;
+	background-image: url(../images/navigation.png);
+	background-position: 0px -20px;
+}
+
+.menuBar {
+	width: 100%;
+	float: left;
+	position: relative;
+	top: -50px;
+}
+
+.menuBar ul {
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.08)
+}
+
+.menuBar ul li {
+	line-height: 131px;
+	text-align: center;
+	border-top: 1px solid #dbdbdb;
+	cursor: pointer;
+	height: 131px;
+}
+
+.menuBar ul li a,
+.menuBar_Jump p {
+	letter-spacing: 3px;
+	font-size: 39px;
+	color: #000000;
+}
+
+.menuBar_Jump p {
+	letter-spacing: 2px;
+	font-size: 30px;
+	color: #CCCCCC;
+}
+
+.menuBar ul li:nth-child(1) {
+	border-top: 0px solid;
+	line-height: 90px;
+	margin-top: 50px;
+	height: 132px;
+}
+
+.menuBar ul li img:nth-child(1) {
+	margin-top: 30px;
+	cursor: pointer
+}
+
+.menuBar ul li:nth-child(2) {
+	line-height: 90px;
+	border-top: 0px solid;
+	height: 90px;
+}
+
+.menuBar ul li:nth-child(2) a {
+	color: #CCCCCC;
+	font-size: 30px;
+	letter-spacing: 5px;
+}
+
+
+/*======点击搜索框======*/
+
+.navigationHead .nav .nav_search {
+	position: absolute;
+	right: 54px;
+	background-image: url(../images/search.png);
+}
+
+.navigationHead .search {
+	background: #f5f5f5;
+	height: 108px;
+	margin: 0 20px 0 45px;
+	top: -112px;
+	display: none;
+	padding: 0 21px 0 24px;
+	border-radius: 14px;
+	position: absolute;
+	top: 12px;
+	right: 0;
+	width: 0;
+}
+
+.search .search_box {
+	clear: both;
+	text-align: left;
+}
+
+.search .search_box img {
+	width: 66px;
+	height: 66px;
+	float: right;
+	margin: 18px 0px 0 0;
+	cursor: pointer
+}
+
+.search_box input {
+	line-height: 108px;
+	font-size: 54px;
+	outline: none;
+	letter-spacing: 4px;
+	background: #f5f5f5;
+	color: #CCCCCC;
+}
+
+
+/*======轮播======*/
+
+.carousel {
+	width: 100%;
+	padding-top: 132px;
+}
+
+.carousel_img01 {
+	width: 100%;
+	height: 600px;
+	background: #0000FF;
+	position: relative;
+	margin: 0 auto;
+	z-index: -1;
+}
+
+.slipping-area {
+	position: relative;
+}
+
+.slipping-imgbox {
+	overflow-x: hidden;
+	width: 9999px;
+}
+
+.slipping-imgbox>img {
+	height: 600px;
+	float: left;
+}
+
+
+/*点击按钮样式*/
+
+.slipping-dot {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	-moz-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	-o-transform: translate(-50%, 0);
+}
+
+.slipping-dot>em>i {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	background-clip: padding-box;
+	border-radius: 50%;
+	background-color: transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -5px 0 0 -5px;
+}
+
+.slipping-dot>em.active>i {
+	background-color: #000;
+}
+
+.slipping-dot>em {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-clip: padding-box;
+	border-radius: 50%;
+	background-color: #80f1d4;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	margin-left: 15px;
+}
+
+
+/*======内容展示区======*/
+
+.displayArea {
+	max-width: 1242px;
+	margin: 0 auto;
+	/*	margin-top: 110px;*/
+}
+
+.displayArea div img {
+	width: 100%;
+}
